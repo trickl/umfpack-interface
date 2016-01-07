@@ -7,12 +7,14 @@ package edu.ufl.cise.umfpack;
 
 import cern.colt.matrix.DoubleMatrix1D;
 import edu.ufl.cise.umfpack.bindings.colt.UmfPackSolver;
+import edu.ufl.cise.categories.IntegrationTest;
 import cern.colt.matrix.impl.DenseDoubleMatrix1D;
 import cern.colt.matrix.impl.SparseDoubleMatrix2D;
 import junit.framework.Assert;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 /**
  *
@@ -34,6 +36,7 @@ public class UmfPackLibraryTest {
    /**
     * This is the example calculation provided in the UMFPack Quickstart Guide
     */
+   @Category(IntegrationTest.class)
    @Test
    public void testQuickstartExample() {
       double tolerance = 1e-10;
